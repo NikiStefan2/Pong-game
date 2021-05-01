@@ -9,6 +9,8 @@ public class MovePlayer : NetworkBehaviour
 
     public float speed = 4f;
 
+    public Ball Ball;
+
     public void movement()
     {
         if (!isLocalPlayer) return;
@@ -19,10 +21,22 @@ public class MovePlayer : NetworkBehaviour
     private void Start()
     {
         rb.gravityScale = 0;
+
+        if (isServer) Ball.SpawnBall(new Vector2(transform.position.x + 1f, transform.position.y));
     }
 
     private void Update()
     {
         movement();
+
+        //if (Input.GetKeyDown(KeyCode.Space) && isLocalPlayer)
+        //{
+        //    Debug.LogWarning("merge spatiu");
+        //    //Instantiate(ball, SpawnLocation, new Quaternion(0, 0, 0, 0));
+        //    Ball.MoveBall();
+        //    Ball.ball.GetComponent<Rigidbody2D>().velocity = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        //}
+
+        if (isServer) Ball.canShoot = true;
     }
 }
