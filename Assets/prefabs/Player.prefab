@@ -206,4 +206,4 @@ MonoBehaviour:
   syncInterval: 0.1
   rb: {fileID: 2509991102861850298}
   speed: 4
-  Ball: {fileID: 5492483420865891988, guid: daf149c9a5ba71b4d8262e33412ddb06, type: 3}
+  Ball: {fileID: 538276059166176783, guid: daf149c9a5ba71b4d8262e33412ddb06, type: 3}

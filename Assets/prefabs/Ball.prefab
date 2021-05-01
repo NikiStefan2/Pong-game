@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8940498708624808310}
   - component: {fileID: 8749199053313567359}
   - component: {fileID: -6246842045365057109}
-  - component: {fileID: 5492483420865891988}
+  - component: {fileID: 538276059166176783}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -180,7 +180,7 @@ MonoBehaviour:
   localPositionSensitivity: 0.01
   localRotationSensitivity: 0.01
   localScaleSensitivity: 0.01
---- !u!114 &5492483420865891988
+--- !u!114 &538276059166176783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,9 +189,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 239131006210908849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3234a4aed382464093990cc9e8e86e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 643fe3b0571461b4d935fcc3723da860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 239131006210908849}
-  player: {fileID: 1412043221111121875, guid: 5b248f4325f6814499d5f09a35c8cfd9, type: 3}
-  SpawnLocation: {x: 0, y: 0}
+  SpawnPosition: {x: 0, y: 0}

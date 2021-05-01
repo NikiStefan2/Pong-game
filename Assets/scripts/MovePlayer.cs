@@ -9,20 +9,22 @@ public class MovePlayer : NetworkBehaviour
 
     public float speed = 4f;
 
-    public Ball Ball;
+    public BallScript Ball;
 
     public void movement()
     {
         if (!isLocalPlayer) return;
         float yMov = Input.GetAxisRaw("Vertical");
-        transform.Translate(0, yMov * speed * Time.deltaTime, 0);
+        ///transform.Translate(0, Input.mousePosition.y * speed * Time.deltaTime, 0);
+        transform.position 
     }
 
     private void Start()
     {
         rb.gravityScale = 0;
 
-        if (isServer) Ball.SpawnBall(new Vector2(transform.position.x + 1f, transform.position.y));
+        //if (isServer) Ball.SpawnBall(new Vector2(transform.position.x + 1f, transform.position.y));
+        Ball.SpawnBall();
     }
 
     private void Update()
@@ -37,6 +39,6 @@ public class MovePlayer : NetworkBehaviour
         //    Ball.ball.GetComponent<Rigidbody2D>().velocity = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         //}
 
-        if (isServer) Ball.canShoot = true;
+        //if (isServer) Ball.canShoot = true;
     }
 }
