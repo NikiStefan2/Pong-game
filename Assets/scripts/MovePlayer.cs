@@ -7,7 +7,7 @@ public class MovePlayer : NetworkBehaviour
 {
     public Rigidbody2D rb;
 
-    public float speed = 4f;
+    public float speed = 8f;
 
     //public BallSCript1 Ball;
 

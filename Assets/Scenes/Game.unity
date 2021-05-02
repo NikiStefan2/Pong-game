@@ -500,6 +500,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 239131006210908849, guid: daf149c9a5ba71b4d8262e33412ddb06,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bila
+      objectReference: {fileID: 0}
     - target: {fileID: 3598066390537748488, guid: daf149c9a5ba71b4d8262e33412ddb06,
         type: 3}
       propertyPath: m_RootOrder
@@ -558,7 +563,7 @@ PrefabInstance:
     - target: {fileID: 8507368807150937462, guid: daf149c9a5ba71b4d8262e33412ddb06,
         type: 3}
       propertyPath: m_GravityScale
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: daf149c9a5ba71b4d8262e33412ddb06, type: 3}
