@@ -41,4 +41,9 @@ public class PereteInvisibil : MonoBehaviour
             //Debug.LogWarning(player2Dies + " " + player2DiesCount);
         }
     }
+    public void Reset()
+    {
+        player1Lives = 5;
+        player2Lives = 5;
+    }
 }

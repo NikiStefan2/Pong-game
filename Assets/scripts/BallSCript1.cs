@@ -9,6 +9,9 @@ public class BallSCript1 : MonoBehaviour
 
     [SerializeField]
     public GameObject Bila;
+    public Transform Ball;
+
+    public Transform StartPosition;
 
     private void Start()
     {
@@ -28,5 +31,10 @@ public class BallSCript1 : MonoBehaviour
     {
         //if(Input.GetMouseButtonDown(0)) MoveBall();
         Bila = GameObject.FindGameObjectWithTag("Bila");
+    }
+
+    public void ResetBall()
+    {
+        Ball.position = StartPosition.position;
     }
 }

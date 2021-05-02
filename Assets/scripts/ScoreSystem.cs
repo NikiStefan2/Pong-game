@@ -20,6 +20,27 @@ public class ScoreSystem : MonoBehaviour//scrore
 
     public int StartScore;
 
+    public Transform ball;
+    public BallSCript1 ballScript;
+
+    public GameObject menu;
+    public TMP_Text winnerText;
+
+    public bool gameIsPaused = false;
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        menu.SetActive(true);
+        winnerText.text = "Paused";
+        gameIsPaused = true;
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        menu.SetActive(false);
+        gameIsPaused = false;
+    }
     public void WriteScore()
     {
         //player1Dies = PereteInvisibil.player1DiesCount;
@@ -32,8 +53,52 @@ public class ScoreSystem : MonoBehaviour//scrore
         score.text = Scor;
     }
 
+    public void CheckScore()
+    {
+        if (player1Lives == 0) GameOver(2);
+        if (player2Lives == 0) GameOver(1);
+    }
+
     private void Update()
     {
         WriteScore();
+        CheckScore();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameIsPaused)
+            {
+                ResumeGame();
+            } else
+            {
+                PauseGame();
+            }
+            //gameIsPaused? ResumeGame() : PauseGame();
+        }
+    }
+
+    public void GameOver(int winner)
+    {
+        switch (winner)
+        {
+            case 1:
+                menu.SetActive(true);
+                winnerText.text = "Player 1 Wins";
+                break;
+            case 2:
+                menu.SetActive(true);
+                winnerText.text = "Player 2 Wins";
+                break;
+        }
+    }
+
+    public void Reset()
+    {
+        menu.SetActive(false);
+        player1Lives = PereteInvisibil.player1Lives;//5
+        player2Lives = PereteInvisibil.player2Lives;//5
+
+        perete.Reset();
+        ballScript.ResetBall();
     }
 }
