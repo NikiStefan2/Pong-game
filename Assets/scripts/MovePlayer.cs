@@ -9,22 +9,26 @@ public class MovePlayer : NetworkBehaviour
 
     public float speed = 4f;
 
-    public BallScript Ball;
+    //public BallSCript1 Ball;
+
+    //public GameObject ball;
 
     public void movement()
     {
         if (!isLocalPlayer) return;
         float yMov = Input.GetAxisRaw("Vertical");
-        ///transform.Translate(0, Input.mousePosition.y * speed * Time.deltaTime, 0);
-        transform.position 
+        transform.Translate(0, yMov * speed * Time.deltaTime, 0);
+        //transform.position = input.museposition.y 
     }
 
     private void Start()
     {
         rb.gravityScale = 0;
 
+        //Ball = ball.GetComponent<BallSCript1>();
+
         //if (isServer) Ball.SpawnBall(new Vector2(transform.position.x + 1f, transform.position.y));
-        Ball.SpawnBall();
+        //Ball.MoveBall();
     }
 
     private void Update()
