@@ -20,7 +20,7 @@ public class BallSCript1 : MonoBehaviour
     public void MoveBall()
     {
         //ball.GetComponent<Rigidbody2D>().velocity = new Vector2(1f, 1f);
-        Bila.GetComponent<Rigidbody2D>().AddForce(new Vector2(-4f, 1f), ForceMode2D.Impulse);
+        Bila.GetComponent<Rigidbody2D>().AddForce(new Vector2(-8f, 1f), ForceMode2D.Impulse);
         Debug.LogError(Bila.GetComponent<Rigidbody2D>().velocity);
     }
 

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -8940498708624808310}
   - component: {fileID: -6246842045365057109}
   - component: {fileID: 8258903914680674094}
+  - component: {fileID: 775270165216996806}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Bila
@@ -179,3 +180,15 @@ MonoBehaviour:
   syncAngularVelocity: 1
   clearAngularVelocity: 0
   angularVelocitySensitivity: 0.1
+--- !u!114 &775270165216996806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239131006210908849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb7e95129bfcb64dbb1f3d83158202f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
